@@ -1,0 +1,6 @@
+train: ./images/train
+val: ./images/val
+test: ./images/test
+
+nc: 3
+names: ['face','face_mask','mask']

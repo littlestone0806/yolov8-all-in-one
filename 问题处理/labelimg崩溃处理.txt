@@ -1,0 +1,9 @@
+1、必看！
+确保datasets\VOCdevkit\txt文件夹中，有classes.txt，这个是labelimg预加载的类文件，如果没有就新建一个空白的
+
+2、IndexError: list index out of range
+确保datasets\VOCdevkit\txt文件夹中，有classes.txt，并且classes.txt中已将所有的标签类都添加进去了，每种标签占一行。不可少类！
+
+3、ValueError: not enough values to unpack (expected 5, got 1)
+这个通常是拷贝来的yolo标注文件，非labelimg制作的，里面有多余的空行。
+解决办法：查看datasets\VOCdevkit\txt文件夹中，所有的标注信息txt文件中，是不是有多余的空行，如果有，执行datasets文件夹中的“去除yolo格式标注多余回车.bat”

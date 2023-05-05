@@ -1,0 +1,29 @@
+摘自官网：https://docs.ultralytics.com/modes/train/#arguments
+
+model=yolov8n.pt   例如：yolov8l.pt、yolov8n.yaml 等，用哪个模型，需要将对应的文件从model文件夹里移动到主目录
+传入的model.yaml文件或者model.pt文件，用于构建网络和初始化，不同点在于只传入yaml文件的话参数会随机初始化
+
+data=data.yaml
+训练数据集的配置yaml文件，不要和模型的yaml弄混！
+
+epochs=300
+训练轮次数
+
+patience=50
+指定暂停训练观察轮数，默认50，如果50轮没有精度提升，模型会直接停止训练
+
+batch=16
+训练批次，默认16，如果内存或者显存不够，可适当调小
+
+imgsz=640
+训练图片大小，默认640
+
+save=True
+保存训练过程和训练权重，默认开启
+
+save_period=-1
+训练过程中每x个轮次保存一次训练模型，默认-1（不开启）
+
+device=None
+要运行的设备，即cuda device=0或Device=0,1,2,3或device=cpu
+

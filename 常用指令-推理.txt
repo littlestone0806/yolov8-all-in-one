@@ -1,0 +1,37 @@
+摘自官网：https://docs.ultralytics.com/modes/predict/#arguments
+
+model=runs/detect/train/best.pt
+需要推理调用的pt模型文件路径
+
+source=test_data
+和yolov5一致，可以等于图片路径，文件夹路径，视频路径，摄像头编号
+
+conf=0.25
+用于检测的对象置信阈值，默认0.25
+
+show=False
+用于推理视频或摄像头画面过程中展示推理结果，默认False
+
+save=True
+保存检测后输出的图像
+
+save_txt=False
+是否把识别结果保存为txt，默认False。常用于半自动标注
+
+save_conf=False
+保存带有置信度分数的结果 ，默认False
+
+device=None
+要运行的设备，即cuda device=0或Device=0,1,2,3或device=cpu
+
+hide_label=False
+保存识别的图像时候是否隐藏label ，默认False
+
+hide_conf=False
+保存识别的图像时候是否隐藏置信度，默认False
+
+line_thickness=3
+目标框中的线条粗细大小 ，默认3
+
+box=True
+在分割人物中展示box信息，默认True
